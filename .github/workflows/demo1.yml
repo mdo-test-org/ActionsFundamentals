@@ -12,7 +12,7 @@ on:
 
 jobs:
   steve:
-    runs-on: matt-mbp-runner
+    runs-on: ubuntu-22.04
     steps:
       - run: |
           echo "Trigger: ${{ github.event_name }}"
