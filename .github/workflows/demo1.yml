@@ -18,7 +18,7 @@ jobs:
           echo "Trigger: ${{ github.event_name }}"
           echo "Branch: ${{ github.ref}}"
 
-      - uses: action/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: List files
         run: |
