@@ -1,0 +1,15 @@
+name: Reusable workflow demo
+
+on: workflow_dispatch
+
+jobs:
+  caller:
+    uses: mdo-test-org/hello-world-action/.github/workflows/hello-world-reusable.yml@main
+    with:
+      name: Jason
+
+  use-output:
+    runs-on: ubuntu-latest
+    needs: [caller]
+    steps:
+      - run: echo "Time was ${{ needs.caller.outputs.current-time }}"
